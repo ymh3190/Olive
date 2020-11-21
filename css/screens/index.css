@@ -1,0 +1,42 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.screen-header__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.links__btn {
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.links__btn:focus {
+  outline: none;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__icon {
+  margin-right: 5px;
+}
+
+.search__input {
+  border: none;
+}
+
+.search__input::placeholder {
+  font-size: 25px;
+}
+
+.search__input:focus {
+  outline: none;
+}

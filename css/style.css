@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "reset.css";
+@import "variable.css";
+
+/* Components */
+@import "components/clock.css";
+@import "components/greeting.css";
+
+/* Screens */
+@import "screens/index.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: var(--space);
+}
