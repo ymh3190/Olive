@@ -111,6 +111,24 @@
   display: none;
 }
 
+.greeting-form input {
+  margin-top: 5px;
+  background-color: inherit;
+  border: none;
+  color: white;
+  width: 55%;
+  height: 26px;
+}
+
+.greeting-form input::placeholder {
+  color: white;
+  font-size: 24px;
+}
+
+.greeting-form input:focus {
+  outline: none;
+}
+
 .greeting {
   margin-top: 10px;
   font-size: 28px;
