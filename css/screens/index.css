@@ -5,14 +5,16 @@
 
 .screen-header__column:first-child {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .links__btn {
-  background-color: white;
+  background-color: inherit;
   border: none;
   font-size: 16px;
   margin-right: 10px;
+  color: white;
 }
 
 .links__btn:focus {
@@ -23,6 +25,41 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+
+.search__google {
+  opacity: 0;
+  font-size: 14px;
+}
+
+@keyframes borderBottomAnimation {
+  from {
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+  }
+  to {
+    border-bottom: 1px solid white;
+  }
+}
+
+.search:focus-within,
+.search:hover {
+  animation: borderBottomAnimation 0.1s ease-in-out forwards;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.search:hover .search__google,
+.search:focus-within .search__google {
+  animation: appearBtnAnimation 0.1s ease-in-out forwards;
 }
 
 .search__icon {
@@ -31,6 +68,8 @@
 
 .search__input {
   border: none;
+  background-color: inherit;
+  color: white;
 }
 
 .search__input::placeholder {
@@ -39,4 +78,82 @@
 
 .search__input:focus {
   outline: none;
+}
+
+.screen-header__column:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.weather__status {
+  font-size: 18px;
+}
+
+.main-screen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-align: center;
+}
+
+.main-screen__column:first-child {
+  margin-bottom: 10%;
+}
+
+.clock {
+  font-size: 100px;
+}
+
+.greeting-form,
+.greeting {
+  display: none;
+}
+
+.greeting {
+  margin-top: 10px;
+  font-size: 28px;
+}
+
+.showing {
+  display: block;
+}
+
+.todo-title {
+  font-size: 24px;
+}
+
+.todo-form input {
+  background-color: inherit;
+  width: 100%;
+  margin-top: 15px;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.todo-form input:focus {
+  outline: none;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.todo-list button {
+  background-color: inherit;
+  color: white;
+  margin: 4px 0px 2px 0px;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }

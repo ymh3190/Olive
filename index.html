@@ -12,35 +12,54 @@
         <button class="links__btn">Links</button>
         <div class="search">
           <span class="search__icon"><i class="fas fa-search fa-sm"></i></span>
-          <form class="search__form">
+          <form
+            action="https://www.google.com/search?"
+            method="get"
+            class="search__form js-search__form"
+          >
             <input
+              name="q"
               class="search__input js-search__input"
               type="text"
               placeholder=""
             />
           </form>
+          <buttn class="search__google">G</buttn>
         </div>
       </div>
       <div class="screen-header__column">
-        <div class="weather__status"></div>
-        <div class="weather__location">날씨</div>
+        <div class="weather__status js-weather__status"></div>
+        <div class="weather__location js-weather__location"></div>
       </div>
     </header>
+
     <main class="main-screen">
       <div class="main-screen__column">
         <h1 class="clock js-clock"></h1>
-        <h2 class="greeting js-greeting">test</h2>
+        <form class="greeting-form js-greeting-form">
+          <input type="text" placeholder="What is your name?" />
+        </form>
+        <h2 class="greeting js-greeting">Hello</h2>
       </div>
       <div class="main-screen__column">
-        <h3></h3>
-        <input text="text" />
+        <h3 class="todo-title">What is your main focus for today?</h3>
+        <form class="todo-form js-todo-form">
+          <input text="text" />
+        </form>
+        <ul class="todo-list js-todo-list"></ul>
       </div>
     </main>
+
     <footer></footer>
+
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/searchInput.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
   </body>
 </html>
