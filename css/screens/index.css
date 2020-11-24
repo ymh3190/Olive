@@ -1,6 +1,7 @@
 .screen-header {
   display: flex;
   justify-content: space-between;
+  will-change: background-color;
   background-color: inherit;
 }
 
@@ -148,6 +149,7 @@
   width: 100%;
   margin-top: 15px;
   border: none;
+  will-change: border-bottom;
   border-bottom: 1px solid white;
   color: white;
 }
